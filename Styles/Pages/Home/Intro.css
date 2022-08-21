@@ -1,0 +1,68 @@
+.HomeHero__bg{
+  background: var(--c12);
+  box-shadow: inset 0 -90px 0 0 white;
+}
+.HomeHero{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ gap:5.5rem ;
+}
+ .img1{
+  height: 100%;
+  min-height: 450px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.img2{
+  border-radius: 5px;
+}
+.HeroText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 110px ;
+}
+.HeroText h1{
+  margin: 0;
+}
+@media (max-width:1128px) {
+  .HeroText h1{
+    font-size: 3rem;
+    min-width: 15ch;
+  }
+  .HeroText p {
+    font-size: 1.25rem;
+  }
+  .HomeHero{
+    gap: 3rem;
+  }
+}
+@media (max-width:800px) {
+  .HomeHero{
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    gap: 1rem;
+  }
+  .HeroText{
+    margin-bottom: 0;
+  }
+  .HeroText h1{
+    min-width: auto;
+    font-size: 2.85rem;
+  }
+  .HeroImg img{
+    max-height: 300px;
+    max-width: 100%;
+  }
+}
+@media (max-width:425px) {
+  .HeroText h1{
+    font-size: 1.8rem;
+  }
+  .HeroText p{
+    font-size: .9rem;
+  }
+}

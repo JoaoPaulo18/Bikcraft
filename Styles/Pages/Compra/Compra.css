@@ -1,0 +1,215 @@
+.Compra__hero{
+  background: var(--c11);
+  padding: 2rem 0;
+}
+
+.Orcamento__bg{
+  box-shadow:inset 0 250px 0 0 var(--c11);
+  padding: 2rem 0;
+}
+
+.Orcamento{
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+}
+
+.Orcamento h3{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.Orcamento h3::before{
+  content: '';
+  display: block;
+  width: 4px;
+  height: 8px;
+  background: var(--p1);
+}
+
+.Chooses input[type='radio']{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.Bikes__chooses,.Bike__choose__single label span, .Insurance__chooses,.Bike__choose__infos
+{
+  display: none;
+}
+.Chooses{
+  background: var(--c12);
+  box-shadow: 1px 1px 5px 0 rgba(44, 44, 44, .3);
+  padding: 2rem;
+  border-radius: 5px 0 0 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 1rem;
+}
+
+
+.Chooses label{
+  background: var(--c10);
+  width: 100%;
+  padding: .7rem  1rem .7rem 1rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+.Chooses label::before{
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--c6);
+  background: var(--c10);
+}
+
+.Chooses input[type='radio']:checked + label{
+  background: var(--w);
+  color: var(--c11);
+}
+.Chooses input[type='radio']:checked + label::before{
+  box-shadow: inset 0px 0px 0 3px var(--w);
+  background: var(--c7);
+}
+
+.Chooses input[id='Bikcraft']:checked ~ .Bikes__chooses,
+.Chooses input[id='Seguro']:checked ~ .Insurance__chooses{
+  display: block;
+}
+
+.Bikes__chooses .Bike__choose__single + .Bike__choose__single, .Insurance__chooses label ~ label{
+  margin-top: .5rem;
+}
+
+.Bikes__chooses input:checked ~ label{
+  border-radius: 5px 5px 0 0;
+}
+.Bikes__chooses input:checked ~ div{
+  display: flex;
+}
+.Bikes__chooses input:checked ~ label span{
+  display: block;
+  justify-self: end;
+}
+
+.Bike__choose__infos{
+  background: var(--w);
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0 0 5px 5px;
+}
+.Bike__choose__text ul {
+  display: grid;
+  gap: .5rem;
+}
+.Bike__choose__text ul li{
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+  gap: .4rem;
+}
+.Bike__choose__text ul li img{
+  max-width: 16px;
+}
+
+
+
+/***FORMULARIO DE COMPRA***/
+.FORM{
+  background: var(--w);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 1px 1px 5px 0 rgba(44, 44, 44, .3);
+}
+.FORM h3{
+  grid-column: 1/-1;
+}
+.FORM h3 ~ h3{
+  margin-top: 2rem;
+}
+.FORM label{
+  display: block;
+}
+
+.FORM label + input{
+  width: 100%;
+  border: 1px solid var(--c4);
+  outline: none;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.FORM .BTN {
+  max-width: max-content;
+  min-width: max-content;
+}
+.FORM .divCheckBox{
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+}
+.FORM .Check{
+  border: 1px solid var(--c4);
+  background: var(--c1);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: .9rem;
+  display: inline-block;
+}
+
+.divCheckBox span a{
+  color: var(--c12);
+  border-bottom: 1px solid var(--c12);
+}
+
+@media (max-width:900px) {
+.Orcamento{
+  grid-template-columns: 1fr;
+}
+.Orcamento img{
+  max-width: 250px;
+  width: 100%;
+}
+.Chooses label, .Chooses div{
+  max-width: 450px;
+}
+.FORM{
+  border-radius: 0 0 5px 5px;
+}
+.Chooses{
+  border-radius:5px 5px 0 0 ;
+}
+}
+@media (max-width:545px) {
+  .FORM{
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+  .Chooses{
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr;
+  }
+  .FORM .Check{
+    padding: .5rem;
+  }
+  .Orcamento {
+    padding: 0 .5rem;
+  }
+  .Bike__choose__text li {
+    font-size: .6rem;
+  }
+  .Bike__choose__single span{
+    font-size: .7rem;
+  }
+  .divCheckBox span{
+    font-size: .7rem;
+  }
+}

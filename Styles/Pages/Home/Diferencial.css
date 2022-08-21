@@ -1,0 +1,81 @@
+.Diferencial__bg{
+  background: var(--c11);
+  box-shadow: inset 0 -84px 0 0 var(--w), inset 0 84px 0 0 var(--w);
+}
+.Diferencial{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+}
+.Diferencial__img{
+  align-self: center;
+  height: 100%;
+}
+.Diferencial__img img{
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.Diferencial__Texts{
+  padding: calc(3rem + 84px) 0;
+  display: grid;
+  gap: 1rem;
+}
+.Diferencial__Texts h3,.Diferencial__Texts a {
+  text-transform: uppercase;
+  max-width: max-content;
+}
+.Diferencial__Texts a::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--p1);
+}
+.Diferencial__Texts a:hover{
+  color: var(--w);
+}
+.Diferencial__Texts a:hover::after{
+  background: var(--w);
+}
+.Extras{
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width:990px) {
+    .Diferencial__Texts h2{
+      font-size: 3rem;
+    }
+    .Diferencial__Texts h3{
+      font-size: 1.25rem;
+    }
+    .Diferencial__Texts > p{
+      font-size: 1.25rem;
+    }
+}
+@media (max-width:800px) {
+  .Diferencial{
+    grid-template-columns: 1fr;
+  }
+  .Diferencial__bg{
+    box-shadow: none;
+  }
+  .Diferencial__Texts{
+    padding: 2rem 0;
+  }
+  .Diferencial__Texts h2{
+    font-size: 1.85rem;
+  }
+  .Diferencial__Texts h3{
+    font-size: 1.15rem;
+  }
+  .Diferencial__Texts > p{
+    font-size: 1.15rem;
+  }
+  .Diferencial__Texts a{
+    font-size: 1.25rem;
+  }
+  .Diferencial__img{display: none;}
+}

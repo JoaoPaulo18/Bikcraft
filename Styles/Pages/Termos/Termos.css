@@ -1,0 +1,22 @@
+.Termos__hero{
+  background: var(--c11);
+  padding: 2rem 0;
+}
+
+.Termos{
+  padding: 3rem .5rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.Termo__single{
+  display: grid;
+  gap: 1rem;
+}
+
+.Termo__single h3{
+  font-weight: 600;
+}
+.Termo__single p{
+  max-width: 75ch;
+}

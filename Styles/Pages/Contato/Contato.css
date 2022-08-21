@@ -1,0 +1,171 @@
+.Contato__hero{
+  background:var(--c11) ;
+  padding: 3rem 0;
+}
+
+.Location__bg{
+  background: var(--c11);
+  box-shadow: inset 0 -250px 0 0 var(--w);
+}
+.Location{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.Local__infos{
+  background: var(--c12);
+  padding: 2rem;
+  border-radius: 5px 0 0 5px;
+  display: grid;
+  gap: 2rem;
+  align-content: start;
+}
+.Local__infos ul, .Local__infos .number{
+  position: relative;
+  padding-left: 18px;
+}
+.Ruas::before, .Emails::before, .number::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top:3px;
+  left: -6px;
+  width: 18px;
+  height: 17px;
+}
+
+.Ruas::before{
+  background: url('../../../img/icones/local.svg');
+}
+.Emails::before{
+  background: url('../../../img/icones/email.svg');
+}
+.number::before{
+  background: url('../../../img/icones/telefone.svg');
+  top: 2px;
+}
+
+.Social{
+  display: flex;
+  gap: 1rem;
+}
+
+.Message{
+  background: var(--w);
+  box-shadow: 1px 1px 5px 0 rgba(44, 44, 44, .3);
+  border-radius:0 5px 5px 0;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-items: start;
+}
+.Message .BTN{
+  grid-column: 1/-1;
+}
+.Message div{
+  width: 100%;
+}
+.Message input, textarea{
+  display: block; 
+  outline: none;
+  border: 1px solid var(--c2);
+  background: var(--c1);
+  font: 400 1rem/1.5 'Roboto',sans-serif;
+  padding:.5rem 1rem;
+  width: 100%;
+}
+
+.Message textarea{
+  resize: vertical;
+  max-height: 250px;
+  min-height: 150px;
+}
+
+.Maps{
+  padding: 7.5rem 1rem;
+}
+.Maps .Title{
+  margin-bottom: 4rem;
+}
+
+.Maps__Container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.Maps__Container img{
+  border-radius: 5px 5px 0 0;
+}
+.Map__single{
+  display: grid;
+  gap: 2em;
+}
+.Localizacao__info{
+  display: grid;
+  gap: 1.5rem;
+  padding-left:calc(100% / 8);
+}
+.Localizacao__info h3{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Localizacao__info h3::before{
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  background: var(--p1);
+}
+.Outras__infos{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap:2rem;
+}
+.Outras__infos li{
+  display: grid;
+  gap: 1rem;
+}
+.Map__single span{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+@media (max-width:700px) {
+  .Location__bg{
+    box-shadow: inset 0 0 0 0 var(--w);
+    padding: 1rem 0;
+  }
+  .Location{
+    grid-template-columns: 1fr;
+  }
+  .Message,.Local__infos{
+    padding: 1rem;
+  }
+  .Local__infos{
+    border-radius: 5px 5px 0;
+  }
+  .Message{
+    border-radius: 0 0 5px 5px;
+  }
+  .Maps__Container{
+    grid-template-columns: 1fr;
+  }
+
+.Maps{
+  padding: 3rem 1rem;
+}
+}
+@media (max-width:360px) {
+  .Localizacao__info h3{
+    font-size: 1.5rem;
+  }
+  .Localizacao__info{
+    padding-left: 0;
+  }
+  .Outras__infos{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

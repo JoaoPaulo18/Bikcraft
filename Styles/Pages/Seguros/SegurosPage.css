@@ -1,0 +1,105 @@
+.Seguro__hero{
+  background: var(--c11);
+  padding: 2rem 0;
+}
+
+.Vantagens__All__bg{
+  background: var(--c12);
+  padding: 2rem 1rem;
+}
+
+.Vantagens__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.Perguntas{
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 2rem;
+}
+.Questions{
+  justify-self: center;
+}
+
+.Questions dt{
+  margin-bottom: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: .5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  pointer-events: fill;
+}
+.Questions dt:hover{
+  background: var(--c2);
+}
+.Questions dt::before{
+  content: '';
+  width: 12px;
+  height: 8px;
+  background: var(--p1);
+  position: absolute;
+  left: 0;
+}
+
+.Questions dt span{
+  justify-self: end;
+  transform: rotate(180deg);
+  transition: .3s;
+}
+
+.Questions dd{
+  margin-bottom: 2rem;
+  max-width: 80ch;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.Questions .active + dd{
+animation: click .4s forwards;
+opacity: 1;
+transition: .1s;
+}
+.Questions .active span{
+  transform: rotate(0);
+}
+@keyframes click {
+    from{
+      max-height: 0;
+    }
+    to{
+      max-height:150px ;
+    }
+
+}
+@media (max-width:900px) {
+    .Vantagens__container{
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+}
+
+@media (max-width:540px) {
+  .Vantagens__container{
+    grid-template-columns: 1fr;
+  }
+  .Vantagens__container p{
+    font-size: 1rem;
+  }
+}
+@media (max-width:430px) {
+  .Questions dt{
+    font-size: .85rem;
+  }
+  .Questions dd{
+    font-size: .75rem;
+  }
+}

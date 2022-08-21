@@ -1,0 +1,189 @@
+.Bike__Infos__bg{
+  background: var(--c11);
+  padding: 3.5rem 0;
+}
+.Bike__infos__title{
+  margin-bottom: 3.5rem;
+}
+.Bike__infos__title h2{
+  font-size: 2.125rem;
+}
+.Infos__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 2rem;
+}
+.Bikes__Images{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.125rem;
+}
+.Bikes__Images img{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Bikes__Images div{
+  order: 2;
+
+}
+.Bikes__Images{
+  max-width: 560px;
+}
+.Bikes__Images .MainImg{
+  order: -1;
+  grid-column: span 2;
+}
+
+.Bikes__Texts{
+  display: grid;
+  gap: 3.25rem;
+}
+
+.ComprarAgora{
+  display: grid;
+  justify-items: start;
+  gap: 2rem;
+}
+.BtnContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.BtnContainer a{
+  grid-row: span 2;
+}
+.BtnContainer span{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.Especificacoes,.Ficha{
+  display: grid;
+  gap: .875rem;
+}
+.Especificacoes__bg{
+  background: var(--c12);
+  border-radius: 5px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:2.125rem ;
+}
+.Espicifacacao{
+  display: grid;
+  gap:.5rem ;
+}
+
+.Ficha__bg{
+  background: var(--c12);
+  padding: calc(2rem - .875rem) 2rem;
+  border-radius: 5px;
+  display: grid;
+
+}
+.Ficha__bg .Info__Ficha{
+  display: flex;
+  justify-content: space-between;
+  padding: .875rem 0;
+}
+.Ficha__bg div + div{
+  border-top: 1px solid var(--c11);
+}
+
+.Bike__escolha{
+  padding: 2rem .5rem;
+  display:grid;
+  gap: 1rem;
+}
+.Escolhas{
+  display: flex;
+  gap: 2rem;
+}
+
+.Pedale__seguro{
+  padding:0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  background:var(--c11);
+  box-shadow: inset 0 60px 0 0 var(--w), inset 0 -60px 0 0 var(--c12);
+}
+
+.Pedale__img{
+  max-width:680px ;
+}
+
+.Pedale__seguro img{
+  border-radius: 5px;
+}
+
+.Pedale__text{
+  padding: 80px 0;
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+@media (max-width:1060px) {
+ .ComprarAgora .BTN{
+  font-size: 1rem;
+  padding:1rem;
+  min-width: max-content;
+ }   
+ .ComprarAgora span{
+  font-size: .8rem;
+ }
+ .Pedale__text h2{
+  font-size: 3rem;
+ }
+ .Pedale__text p{
+  font-size: 1.4rem;
+ }
+}
+@media (max-width:810px){
+  .Infos__container{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .Pedale__seguro{
+    grid-template-columns: 1fr;
+    box-shadow: none;
+    padding: 0 1rem;
+  }
+  .Pedale__text h2{
+    font-size: 2.5rem;
+  }
+  .Pedale__img{
+    display: none;
+  }
+}
+@media (max-width:540px){
+  .Escolhas{
+    flex-direction: column;
+  }
+}
+@media (max-width:420px){
+  .BtnContainer{
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+  .Especificacoes__bg{
+    grid-template-columns: 1fr;
+  }
+  .ComprarAgora p{
+    font-size: 1.2rem;
+  }
+  .Pedale__text{
+    padding: 2rem 0;
+  }
+  .Pedale__text h2{
+    font-size: 2rem;
+  }
+  .Pedale__text P{
+    font-size: 1rem;
+  }
+}

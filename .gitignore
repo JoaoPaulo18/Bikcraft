@@ -1,0 +1,3 @@
+*.json;
+img;
+node_modules;

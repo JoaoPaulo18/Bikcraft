@@ -1,0 +1,28 @@
+@import './Styles/Geral.css';
+@import './Styles/Config.css';
+@import './Styles/Menu.css';
+@import './Styles/Footer.css';
+
+/** HOME **/
+@import './Styles/Pages/Home/Intro.css';
+@import './Styles/Pages/Home/Escolha.css';
+@import './Styles/Pages/Home/Diferencial.css';
+@import './Styles/Pages/Home/Parceiros.css';
+@import './Styles/Pages/Home/Citacao.css';
+
+/** BICICLETAS **/
+@import './Styles/Pages/Bicicletas/Bicicletas.css';
+@import './Styles/Pages/Bicicletas/Bikes.css';
+
+/** SEGUROS **/
+@import './Styles/Pages/Seguros/Seguros.css';
+@import './Styles/Pages/Seguros/SegurosPage.css';
+
+/**  CONTATO **/
+@import './Styles/Pages/Contato/Contato.css';
+
+/** TERMOS **/
+@import './Styles/Pages/Termos/Termos.css';
+
+/** COMPRA **/
+@import './Styles/Pages/Compra/Compra.css';

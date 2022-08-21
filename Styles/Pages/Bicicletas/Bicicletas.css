@@ -1,0 +1,155 @@
+.Bicicletas__hero__bg{
+  background: var(--c11);
+  padding: 3.5rem 0 ;
+}
+.Bike__single__bg.white{
+  background: linear-gradient(to right,var(--w) 20%, var(--c11) 0%);
+}
+.Bikes__container{
+  padding: 4rem 0;
+  display: grid;
+  gap: 4rem;
+}
+
+.Bike__img img{
+  border-radius: 5px;
+}
+.Bike__img{
+  position: relative;
+  max-width: 560px;
+  max-height: 340px;
+  width: 100%;
+  height: auto;
+  min-width: 380px;
+}
+
+.Bike__img::after{
+  font-family: 'Roboto',serif;
+  font-size: 1.125rem;
+  padding: .5rem;
+  padding-right: 1rem;
+  display: block;
+  background: var(--c12);
+  color: var(--w);
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.Bikes__container .magic::after{
+  content: 'R$ 2499';
+}
+.Bikes__container .nimbus::after{
+  content: 'R$ 4999';
+}
+.Bikes__container .nebula::after{
+  content: 'R$ 3999';
+}
+
+.Bike__single{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.Bike__name::before{
+  content: '';
+  display: block;
+  width:12px;
+  height: 8px;
+  background: var(--p1);
+  margin-bottom: .5rem;
+}
+.Bikes__infos{
+  display: grid;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+.Bikes__infos p{
+  max-width: 45ch;
+}
+.Bike__extras{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+.Bike__extras ul{
+  padding-bottom: 1rem;
+  display: grid;
+  gap: .5rem;
+}
+.Bike__extras ul li{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Bike__extras ul li img{
+  max-width: 24px;
+  max-height: 22px;
+}
+.bikesBtn{
+  display: flex;
+  align-items: center;
+}
+.Bikes__infos .bikesBtn::after{
+  content: '';
+  display: block;
+  width: 19px;
+  height: 10px;
+  background: url('../../../img/icones/seta.svg') no-repeat;
+  transition: .4s;
+  margin-left: .5rem;
+}
+.bikesBtn:hover:after{
+ transform: translateX(8px);
+}
+
+@media (max-width:890px) {
+  .Bike__img{
+    min-width: 330px;
+  }
+  .Bikes__infos h3{
+    font-size: 1.5rem;
+  }
+  .Bikes__infos p{
+    font-size: 1rem;
+  }
+  .Bike__extras li{
+    font-size: 1rem;
+  }
+  .bikesBtn{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+@media (max-width:800px) {
+  .Bikes__container{
+    gap: 2rem;
+  }
+    .Bike__single{
+      flex-direction: column;
+      padding: 1rem;
+    }
+    .Bike__single__bg.white{
+      background: var(--c11);
+    }
+}
+@media (max-width:400px) {
+  .Bike__img{
+    min-width: 00px;
+  }
+  .Bike__extras{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Bicicletas__hero h1{
+    font-size: 1.5rem;
+  }
+  .Bicicletas__hero h2{
+    font-size: .9rem;
+  }
+}

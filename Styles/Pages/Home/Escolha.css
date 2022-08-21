@@ -1,0 +1,47 @@
+.Escolha{
+  margin-top: 4rem;
+  display: grid;
+}
+.Escolha .Title{
+  margin-left: 120px;
+}
+.Escolha__Container{
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 4.25rem;
+  overflow-x: scroll;
+}
+.Bicicleta__Single img{
+  min-width: 240px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.Bicicleta__Single h3{
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.Bicicleta__Single h3::before{
+  content: '';
+  display: block;
+  width: 12px;
+  height: 8px;
+  background: var(--p1);
+  transition: .2s;
+}
+.Bicicleta__Single:hover h3::before{
+  width: 24px;
+}
+@media (max-width:800px) {
+    .Escolha__Container{
+      padding: 2rem 1rem;
+      gap: 1rem;
+    }
+    .Escolha__Name{
+      font-size: 1.5rem;
+    }
+    .Escolha .Title{
+      margin:0 1rem;
+    }
+}

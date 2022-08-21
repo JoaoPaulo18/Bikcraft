@@ -1,0 +1,131 @@
+.font1-xxl{font: 600 4rem/1.125 'Poppins', sans-serif;}
+
+.font1-xl{font: 600 2rem/.8 'Poppins',sans-serif;}
+
+.font1-l{font: 400 1.5rem/1.5'Poppins',sans-serif;}
+.font2-l{font: 400 1.5rem/1.5'Roboto',sans-serif;}
+
+.font1-m{font: 400 1.125rem/.75 'Poppins',sans-serif;}
+
+.font1-m-b{font: 600 1.125rem/.75 'Poppins',sans-serif;}
+
+.font1-s{font: 400 1rem/1.5 'Poppins',sans-serif;}
+.font2-s{font: 400 1rem/1.5 'Roboto',sans-serif;}
+
+.font1-xs{font: 600 .875rem/1 'Poppins',sans-serif;}
+
+.font2-l-b{font: 500 1.5rem/1.5 'Roboto',sans-serif;}
+
+.font2-m{font: 400 1.125rem/1.5 'Roboto',sans-serif;}
+.font2-m-b{font: 500 1.125rem/1.5 'Roboto',sans-serif;}
+
+.font2-xs{font: 400 .875rem/1 'Roboto',sans-serif;}
+/****  COLOR  *****/
+:root{
+  --c12: #000000;
+  --c11: #111111;
+  --c10: #2E2E2E;
+  --c9: #404040;
+  --c8: #595959;
+  --c7: #717171;
+  --c6: #9C9C9C;
+  --c5: #2B2B2B;
+  --c4: #CCCCCC;
+  --c3: #DEDEDE;
+  --c2: #EDEDED;
+  --c1: #F7F7F7;
+  --w: #FFFFFF;
+
+  --p5:#332200;
+--p4:#664400;
+--p3:#A66f00;
+--p2:#E4A30B;
+--p1:#FFBB00;
+}
+
+.c12{color: #000000;}
+.c11{color: #111111;}
+.c10{color: #2E2E2E;}
+.c9{color: #404040;}
+.c8{color: #595959;}
+.c7{color: #717171;}
+.c6{color: #9C9C9C;}
+.c5{color: #B2B2B2;}
+.c4{color: #CCCCCC;}
+.c3{color: #DEDEDE;}
+.c2{color: #EDEDED;}
+.c1{color: #F7F7F7;}
+.w{color: #FFFFFF;}
+
+.p5{color:#332200}
+.p4{color:#664400}
+.p3{color:#A66f00}
+.p2{color:#E4A30B}
+.p1{color:#FFBB00}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.BTN{
+  background: linear-gradient(190deg,#FFBF00, #F2A50C);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  color: var(--p5);
+  font: 600 1.125rem/1.5 'Poppins',sans-serif;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow ease-out .4s;
+}
+.BTN:hover{
+ box-shadow: inset 0 -50px 10px 0  #F2A50C;
+}
+.Title{
+  font-size: 4rem;
+  line-height: 1.125;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.col-2{
+  grid-column: 1/-1;
+}
+input,textarea{
+  transition: .25s;
+}
+input:focus,textarea:focus{
+  border: 1px solid var(--p1) !important;
+  box-shadow: 1px 1px 10px 0 var(--p2);
+  border-radius: 5px;
+}
+@media (max-width:990px){
+  .Title{
+    font-size: 3rem;
+  }
+}
+@media (max-width:630px) {
+    .Title{
+      font-size: 2rem;
+    }
+    .container > h2{
+      font-size: 1.4rem;
+    }
+  .Compra__main > section{
+    padding: 2rem 0 1rem 0;
+  }
+}
+@media (max-width:430px){
+  .BTN{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+  }
+  .container > h2{
+    font-size: 1rem;
+  }
+  .Title{
+    font-size: 1.25rem;
+  }
+}
